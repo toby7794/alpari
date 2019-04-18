@@ -9,7 +9,7 @@ import java.io.IOException;
 public class RatesTests {
     private File testFile;
 
-    @BeforeClass
+    @Before
     public void createFile(){
         testFile = new File("c:\\Users\\TGoddard\\IdeaProjects\\alpari\\resources\\test.txt");
         try { testFile.createNewFile();
@@ -23,10 +23,10 @@ public class RatesTests {
         Assert.assertEquals(testFile.exists(), true);
     }
 
-    @Test
+    /*@Test
     public void readSuccessful(){
         new RatesFileReader("c:\\Users\\TGoddard\\IdeaProjects\\alpari\\resources\\test.txt");
-    }
+    }*/
 
     @After
     public void deleteFile(){
