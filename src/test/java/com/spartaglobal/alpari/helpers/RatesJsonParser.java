@@ -18,8 +18,8 @@ public class RatesJsonParser {
         }
     }
 
-    public void printParsedFile(){
-        System.out.println(rates.get("rates"));
+    public JSONObject getRates() {
+        return rates;
     }
 }
 

@@ -23,10 +23,10 @@ public class RatesTests {
         Assert.assertEquals(testFile.exists(), true);
     }
 
-    /*@Test
+    @Test
     public void readSuccessful(){
         new RatesFileReader("c:\\Users\\TGoddard\\IdeaProjects\\alpari\\resources\\test.txt");
-    }*/
+    }
 
     @After
     public void deleteFile(){
