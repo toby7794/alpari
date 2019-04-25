@@ -7,10 +7,10 @@ import java.io.File;
 import java.io.IOException;
 
 public class RatesTests {
-    private File testFile;
+    private static File testFile;
 
-    @Before
-    public void createFile(){
+    @BeforeClass
+    public static void createFile(){
         testFile = new File("c:\\Users\\TGoddard\\IdeaProjects\\alpari\\resources\\test.txt");
         try { testFile.createNewFile();
         } catch (IOException e) {
@@ -25,11 +25,13 @@ public class RatesTests {
 
     @Test
     public void readSuccessful(){
-        new RatesFileReader("c:\\Users\\TGoddard\\IdeaProjects\\alpari\\resources\\test.txt");
+        RatesFileReader read = new RatesFileReader("c:\\Users\\TGoddard\\IdeaProjects\\alpari\\resources\\test.txt");
+        close;
+
     }
 
-    @After
-    public void deleteFile(){
+    @AfterClass
+    public static void deleteFile(){
         testFile.delete();
     }
 }

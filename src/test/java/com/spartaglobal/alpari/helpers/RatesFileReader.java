@@ -2,6 +2,7 @@ package com.spartaglobal.alpari.helpers;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 
 public class RatesFileReader {
 
@@ -16,6 +17,15 @@ public class RatesFileReader {
     }
     public FileReader getRatesFile(){
         return ratesFile;
+    }
+
+    public void closeReader(FileReader reader) {
+        try {
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
 
